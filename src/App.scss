@@ -1,36 +1,26 @@
 .App {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  flex-flow: column wrap;
   width: 100%;
 }
-
+//hides scroll bar
 body::-webkit-scrollbar {
   display: none;
 }
-
 .svh-info {
   background-color: #0f4c81;
   min-width: 100vw;
+  div {
+    color: white;
+    .info-login {
+      text-align: center;
+    }
+  }
 }
-
-.svh-info div {
-  color: white;
-}
-
-.svh-info div .info-login {
-  text-align: center;
-}
-
 section {
   width: 100%;
   height: 100%;
 }
-
 section:nth-child(1) {
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,14 +33,12 @@ section:nth-child(2) {
   background-size: cover;
   background-attachment: scroll;
 }
-
 .dotstyle {
   position: fixed;
   top: 50%;
   right: 1%;
   z-index: 100;
 }
-
 .dotstyle ul {
   position: relative;
   display: block;
@@ -68,6 +56,7 @@ section:nth-child(2) {
   height: 16px;
   cursor: pointer;
   color: red;
+
 }
 
 .dotstyle li a {
@@ -81,17 +70,13 @@ section:nth-child(2) {
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.3);
   text-indent: -999em;
-  cursor: pointer;
-  /* make the text accessible to screen readers */
+  cursor: pointer; /* make the text accessible to screen readers */
   position: absolute;
 }
-
 .dotstyle-fillup li a {
   overflow: hidden;
-  background-color: rgba(0, 238, 255, 0.329);
-  -webkit-box-shadow: inset 0 0 0 2px white;
-          box-shadow: inset 0 0 0 2px white;
-  -webkit-transition: 0.3s;
+  background-color:rgba(0, 238, 255, 0.329);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
   transition: 0.3s;
 }
 
@@ -103,9 +88,7 @@ section:nth-child(2) {
   left: 0;
   width: 100%;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 1px #fff;
-          box-shadow: 0 0 1px #fff;
-  -webkit-transition: height 0.3s;
+  box-shadow: 0 0 1px #fff;
   transition: height 0.3s;
 }
 
@@ -117,4 +100,3 @@ section:nth-child(2) {
 .dotstyle-fillup li.current a::after {
   height: 100%;
 }
-/*# sourceMappingURL=App.css.map */
