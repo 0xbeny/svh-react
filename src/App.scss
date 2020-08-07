@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-flow: column wrap;
-  width: 100%;
+  width: 100vw;
 }
 //hides scroll bar
 body::-webkit-scrollbar {
@@ -12,6 +12,11 @@ body::-webkit-scrollbar {
   min-width: 100vw;
   div {
     color: white;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(204, 204, 204);
+    }
     .info-login {
       text-align: center;
     }
@@ -56,7 +61,6 @@ section:nth-child(2) {
   height: 16px;
   cursor: pointer;
   color: red;
-
 }
 
 .dotstyle li a {
@@ -75,7 +79,7 @@ section:nth-child(2) {
 }
 .dotstyle-fillup li a {
   overflow: hidden;
-  background-color:rgba(0, 238, 255, 0.329);
+  background-color: rgba(0, 238, 255, 0.329);
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
   transition: 0.3s;
 }
@@ -99,4 +103,56 @@ section:nth-child(2) {
 
 .dotstyle-fillup li.current a::after {
   height: 100%;
+}
+.test {
+  text-align: center;
+  background-color: rgb(0, 129, 168);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 5px;
+  transition: background 300ms ease-out;
+  &:hover {
+    background-color: rgb(82, 187, 219);
+    color: black;
+  }
+  &:active {
+    border: none;
+  }
+}
+p + .test {
+  background-color: red;
+}
+@keyframes slide-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-to-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-to-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.svh-col-slide-to-right {
+  animation: 1.3s ease-out 0s 1 slide-to-right;
+}
+.svh-col-slide-to-left {
+  animation: 1.3s ease-out 0s 1 slide-to-left;
+}
+.svh-col-slide-to-up {
+  animation: 1.3s ease-out 0s 1 slide-to-up;
 }

@@ -12,7 +12,7 @@ class InfoHeader extends Component {
     const { headerInfo } = this.state;
    
     const infoDivParentClass =
-      "row text-center p-2 align-items-center svh-info ";
+      "row text-center p-2 align-items-center svh-info svh-col-slide-to-right";
     return (
       <div className={infoDivParentClass}>
         {headerInfo.map((info) => (

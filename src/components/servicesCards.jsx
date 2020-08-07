@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
+
 import ServiceCard from "./serviceCard";
 import { getCardData } from "../services/services";
 
@@ -16,11 +15,9 @@ class ServicesCards extends Component {
 
   render() {
     return (
-      <Row>
-        <Col md="3" lg="3">
-          <ServiceCard cardData={this.state.cardData} />
-        </Col>
-      </Row>
+      
+          <ServiceCard  cardData={this.state.cardData} />
+        
     );
   }
 }

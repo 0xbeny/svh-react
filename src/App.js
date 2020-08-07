@@ -17,7 +17,7 @@ function App() {
           
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/information-communication-technology" exact component={ICT} />
+          <Route path="/ict" component={ICT} />
         </Switch>
         </div>
    
