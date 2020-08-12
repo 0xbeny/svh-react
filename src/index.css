@@ -1,1 +1,12 @@
+@font-face {
+    font-family:iransans;
+    src: url("./fonts/Vazir.ttf");
+}
 
+body{
+    font-family: iransans;
+}
+*{
+    font-family: iransans;
+
+}

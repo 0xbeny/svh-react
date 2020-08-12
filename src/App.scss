@@ -1,3 +1,7 @@
+$OrangeColor: #f0a540;
+$RedColor: #a00005;
+$GreenColor: #4caf50;
+$BlueColor: #2196f3;
 .App {
   display: flex;
   flex-flow: column wrap;
@@ -147,12 +151,131 @@ p + .test {
     transform: translateY(0);
   }
 }
+@keyframes slide-to-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .svh-col-slide-to-right {
-  animation: 1.3s ease-out 0s 1 slide-to-right;
+  animation: 1.5s ease-out 0s 1 slide-to-right;
 }
 .svh-col-slide-to-left {
-  animation: 1.3s ease-out 0s 1 slide-to-left;
+  animation: 1.5s ease-out 0s 1 slide-to-left;
 }
 .svh-col-slide-to-up {
-  animation: 1.3s ease-out 0s 1 slide-to-up;
+  animation: 1.5s ease-out 0s 1 slide-to-up;
+}
+.svh-col-slide-to-down {
+  animation: 1.5s ease-out 0s 1 slide-to-down;
+}
+.ict-web {
+  animation: 1.5s ease-out 0s 1 slideInUp;
+  // background-image: url("./images/code.jpg");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: right;
+
+  width: 100vw;
+  height: auto;
+  padding: 5%;
+}
+.ict-web {
+  filter: brightness(100%);
+}
+@mixin iconstyle($color) {
+  color: white;
+
+  background-color: $color;
+  border: 1px solid $color;
+  border-radius: 50%;
+  padding: 10%;
+  filter: drop-shadow(8px 8px 10px black);
+}
+.ict-web-items {
+  &:nth-child(1) h3 {
+    color: $BlueColor;
+    filter: drop-shadow(8px 8px 10px black);
+  }
+  &:nth-child(2) h3 {
+    color: $RedColor;
+    filter: drop-shadow(8px 8px 10px black);
+  }
+  &:nth-child(3) h3 {
+    color: $GreenColor;
+    filter: drop-shadow(8px 8px 10px black);
+  }
+  &:nth-child(4) h3 {
+    color: $OrangeColor;
+    filter: drop-shadow(8px 8px 10px black);
+  }
+  h3 {
+    font-family: vazir;
+    font-size: 18px;
+    padding: 5% 0;
+  }
+  i:hover,
+  h3:hover {
+    cursor: pointer;
+    animation: swing 1s normal;
+  }
+  &:nth-child(1) i {
+    @include iconstyle($BlueColor);
+  }
+  &:nth-child(2) i {
+    @include iconstyle($RedColor);
+  }
+  &:nth-child(3) i {
+    @include iconstyle($GreenColor);
+  }
+  &:nth-child(4) i {
+    @include iconstyle($OrangeColor);
+  }
+}
+
+@keyframes ro {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.list-flush {
+  display: inline-block;
+  i {
+    color: $GreenColor;
+  }
+  h6 {
+    font-size: 16px;
+  }
+}
+.svh-card {
+  &:hover {
+    transition: background 300ms ease-in-out;
+    opacity: 0.9;
+    animation: swing 1000ms normal;
+  }
+}
+.team-img {
+  &:hover{
+    transition: background 300ms ease-in-out;
+    opacity: 0.9;
+    animation: swing 1000ms normal; 
+  }
+  img {
+    // filter: drop-shadow(8px 8px 10px black);
+    filter: drop-shadow(4px 4px 8px rgb(92, 92, 92));
+  }
+  h4 {
+    filter: drop-shadow(4px 4px 8px rgb(92, 92, 92));
+  }
+  h6 {
+    filter: drop-shadow(4px 4px 8px rgb(92, 92, 92));
+  }
 }
