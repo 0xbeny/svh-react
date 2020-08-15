@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import  ScrollAnimation from 'react-animate-on-scroll';
 import About from './components/pages/about';
+import Contact from './components/pages/contact';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/ict" component={ICT} />
         
         <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
 
         <Redirect from="/" exact to="/home" />
         <Redirect to="/404"  />

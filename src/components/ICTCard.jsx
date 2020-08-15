@@ -8,7 +8,7 @@ class ICTCard extends Component {
       <React.Fragment>
         {this.props.data.map((item) => (
           <Col key={item.id} lg="4" className="mt-3 mb-3">
-            <ScrollAnimation animateIn="animate__animated animate__slideInUp">
+            {/* <ScrollAnimation animateIn="animate__animated animate__slideInUp"> */}
               <Card className="text-center shadow-lg rounded-lg">
                 <Card.Img variant="top" src={item.image.src} />
                 <Card.Body>
@@ -17,7 +17,7 @@ class ICTCard extends Component {
                   <Card.Text>{item.caption.description}</Card.Text>
                 </Card.Body>
               </Card>
-            </ScrollAnimation>
+            {/* </ScrollAnimation> */}
           </Col>
         ))}
       </React.Fragment>

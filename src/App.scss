@@ -182,7 +182,7 @@ p + .test {
 
   width: 100vw;
   height: auto;
-  padding: 5%;
+  padding: 5px;
 }
 .ict-web {
   filter: brightness(100%);
@@ -270,12 +270,12 @@ p + .test {
   }
   img {
     // filter: drop-shadow(8px 8px 10px black);
-    filter: drop-shadow(4px 4px 8px rgb(92, 92, 92));
+    filter: drop-shadow(4px 4px 8px rgb(189, 189, 189));
   }
   h4 {
-    filter: drop-shadow(4px 4px 8px rgb(92, 92, 92));
+    filter: drop-shadow(4px 4px 8px rgb(189, 189, 189));
   }
   h6 {
-    filter: drop-shadow(4px 4px 8px rgb(92, 92, 92));
+    filter: drop-shadow(4px 4px 8px rgb(189, 189, 189));
   }
 }

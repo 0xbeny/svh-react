@@ -26,37 +26,37 @@ class Navbar extends Component {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <NavLink className="nav-link" to="/home#">
+              <NavLink className="nav-link" to="/home">
                 صفحه اصلی<span className="sr-only">(current)</span>
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about#">
+              <NavLink className="nav-link" to="/about">
                 درباره ما
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/ict#">
+              <NavLink className="nav-link" to="/ict">
                 فناوری اطلاعات و ارتباطات
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/pmp#">
+              <NavLink className="nav-link" to="/pmp">
                 مدیریت پروژه
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/babok#">
+              <NavLink className="nav-link" to="/babok">
                 تحیلی کسب و کار
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/instrument#">
+              <NavLink className="nav-link" to="/instrument">
                 برق و ابزار دقیق
               </NavLink>
             </li> 
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact#">
+              <NavLink className="nav-link" to="/contact">
                 تماس با ما
               </NavLink>
             </li>

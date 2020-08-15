@@ -3,6 +3,8 @@ import DefualtPageTemplate from "../defualtPageTemplate";
 import {
   getCarouselItemData,
   getICTCardServices,
+  getWebServices,
+  getListGroupData,
 } from "../../services/services";
 import ICTSec from "../../images/12818_orig.svg";
 import { ListGroup, Row, Col, Card } from "react-bootstrap";
@@ -11,24 +13,29 @@ import Logo from "../../images/logo.png";
 import Active from "../../images/12773_orig.svg";
 import ICTListGroup from "../common/ICTListGroup";
 import ScrollAnimation from "react-animate-on-scroll";
+import WebServicesIcon from "../webServicesIcon";
 
 class ICT extends Component {
   state = {
     carousel: [],
     ICTCards: [],
+    listGroupCard: [],
+    webServices: [],
   };
   componentDidMount() {
     this.setState({
       carousel: getCarouselItemData(),
       ICTCards: getICTCardServices(),
+      webServices: getWebServices(),
+      listGroupCard: getListGroupData(),
     });
   }
-  componentWillUnmount(){
-    this.setState({carousel:[],ICTCards:[]})
+  componentWillUnmount() {
+    this.setState({ carousel: [], ICTCards: [] });
   }
 
   render() {
-    const { carousel, ICTCards } = this.state;
+    const { carousel, ICTCards, webServices, listGroupCard } = this.state;
     const ict = "";
     const delay = 1;
     // const [key, setKey] = useState("home");
@@ -53,65 +60,24 @@ class ICT extends Component {
               delay={delay}
             >
               <h3 className="text-right">چرا سامانه ورز هزاره؟</h3>
-              <ICTListGroup />
+              <ICTListGroup data={listGroupCard} />
             </ScrollAnimation>
           </Col>
         </Row>
-        <hr className="w-75" />
-        <h2 className="text-center">طراحی سایت</h2>
-        <h6 className="text-center">Web Design</h6>
-        <Row className="ict-web text-light align-items-center">
-          <Col lg="3" className="text-center ict-web-items">
-            <ScrollAnimation animateIn="animate__animated animate__zoomInUp ">
-              <ScrollAnimation
-                animateIn="animate__animated animate__rotateIn "
-                delay={300}
-              >
-                <i className="fa fa-building-o fa-3x " aria-hidden="true"></i>
-              </ScrollAnimation>
-              <h3>طراحی سایت شرکتی</h3>
-            </ScrollAnimation>
-          </Col>
-          <Col lg="3" className="text-center ict-web-items">
-            <ScrollAnimation animateIn="animate__animated animate__zoomInUp ">
-              <ScrollAnimation
-                animateIn="animate__animated animate__rotateIn "
-                delay={300}
-              >
-                <i className="fa fa-newspaper-o fa-3x " aria-hidden="true"></i>
-              </ScrollAnimation>
-              <h3>طراحی سایت خبری</h3>
-            </ScrollAnimation>
-          </Col>
-          <Col lg="3" className="text-center ict-web-items">
-            <ScrollAnimation animateIn="animate__animated animate__zoomInUp ">
-              <ScrollAnimation
-                animateIn="animate__animated animate__rotateIn "
-                delay={300}
-              >
-                <i className="fa fa-shopping-basket fa-3x " aria-hidden="true"></i>
-              </ScrollAnimation>
-              <h3>طراحی فروشگاه اینترنتی</h3>
-            </ScrollAnimation>
-          </Col>
-          <Col lg="3" className="text-center ict-web-items">
-            <ScrollAnimation animateIn="animate__animated animate__zoomInUp ">
-              <ScrollAnimation
-                animateIn="animate__animated animate__rotateIn "
-                delay={300}
-              >
-                <i className="fa fa-user-o fa-3x " aria-hidden="true"></i>
-              </ScrollAnimation>
-              <h3>طراحی سایت شخصی</h3>
-            </ScrollAnimation>
-          </Col>
-        </Row>
-        <hr className="w-75" />
-        <h2 className="text-center">اکتیو و پسیو شبکه</h2>
-        <h6 className="text-center">Active And Passive Network</h6>
-        <Row>
-          <ICTCard data={ICTCards} />
-        </Row>
+        <section>
+          <hr className="w-75" />
+          <h2 className="text-center">طراحی سایت</h2>
+          <h6 className="text-center">Web Design</h6>
+          <WebServicesIcon webServices={webServices} />
+        </section>
+        <section>
+          <hr className="w-75" />
+          <h2 className="text-center">اکتیو و پسیو شبکه</h2>
+          <h6 className="text-center">Active And Passive Network</h6>
+          <Row>
+            <ICTCard data={ICTCards} />
+          </Row>
+        </section>
       </section>
     );
   }

@@ -1,4 +1,5 @@
 var Dan = require("../images/dan.jpg");
+
 var Behnam = require("../images/behnam1.jpg");
 const services = [
   {
@@ -168,8 +169,8 @@ const ICTCardServices = [
 const OurTeam = [
   {
     id: 0,
-    delay:200,
     delay: 200,
+
     image: {
       alt: "first Slide",
       src: Behnam,
@@ -204,6 +205,80 @@ const OurTeam = [
     },
   },
 ];
+const webServices = [
+  {
+    id: 0,
+    title: "طراحی سایت شرکتی",
+    iconClass: "fa fa-building-o fa-3x ",
+  },
+  {
+    id: 1,
+    title: "طراحی سایت خبری",
+    iconClass: "fa fa-newspaper-o fa-3x ",
+  },
+  {
+    id: 2,
+    title: "طراحی فروشگاه اینترنتی",
+    iconClass: "fa fa-shopping-basket fa-3x ",
+  },
+  {
+    id: 3,
+    title: "طراحی سایت شخصی",
+    iconClass: "fa fa-user-o fa-3x ",
+  },
+];
+const listGroupData = [
+  {
+    id: 0,
+    title: "سابقه بالا در امر پشتیبانی و نگهداری انواع سرور",
+    iconClass: "fa fa-check-circle p-1 fa-2x",
+  },
+  {
+    id: 1,
+    title: "سابقه بالا در امر پشتیبانی و نگهداری انواع سرور",
+    iconClass: "fa fa-check-circle p-1 fa-2x",
+  },
+  {
+    id: 2,
+    title: "سابقه بالا در امر پشتیبانی و نگهداری انواع سرور",
+    iconClass: "fa fa-check-circle p-1 fa-2x",
+  },
+  {
+    id: 3,
+    title: "سابقه بالا در امر پشتیبانی و نگهداری انواع سرور",
+    iconClass: "fa fa-check-circle p-1 fa-2x",
+  },
+  {
+    id: 4,
+    title: "سابقه بالا در امر پشتیبانی و نگهداری انواع سرور",
+    iconClass: "fa fa-check-circle p-1 fa-2x",
+  },
+  {
+    id: 5,
+    title: "سابقه بالا در امر پشتیبانی و نگهداری انواع سرور",
+    iconClass: "fa fa-check-circle p-1 fa-2x",
+  },
+];
+const contactData = [
+  {
+    id: 0,
+    title: "طراحی سایت شرکتی",
+    iconClass: "fa fa-phone fa-3x m-3",
+    c: "da",
+  },
+  {
+    id: 1,
+    title: "طراحی سایت شرکتی",
+    iconClass: "fa fa-envelope-o fa-3x m-3",
+    description: "asd",
+  },
+  {
+    id: 2,
+    title: "طراحی سایت شرکتی",
+    iconClass: "fa fa-building-o fa-3x m-3",
+    description: "sad",
+  },
+];
 export function getCardData() {
   return services;
 }
@@ -218,4 +293,13 @@ export function getICTCardServices() {
 }
 export function getOurTeamData() {
   return OurTeam;
+}
+export function getWebServices() {
+  return webServices;
+}
+export function getListGroupData() {
+  return listGroupData;
+}
+export function getContactData() {
+  return contactData;
 }

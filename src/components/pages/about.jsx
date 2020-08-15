@@ -5,38 +5,42 @@ import Active from "../../images/12773_orig.svg";
 import Behnam from "../../images/behnam1.jpg";
 import ICTListGroup from "./../common/ICTListGroup";
 import ScrollAnimation from "react-animate-on-scroll";
-import { getOurTeamData } from "../../services/services";
+import { getOurTeamData, getListGroupData } from "../../services/services";
 import { useEffect } from "react";
-
+import TitleIconDescription from "../titleIconDescription";
 
 class About extends Component {
-  state = {
-    team: [],
-  };
+  constructor(props){
+    super(props);
+    this.state={
+      team: [],
+      listGroupCard: [],
+    }
+  }
+ 
   componentDidMount() {
     console.log("did mount");
-    this.setState({ team: getOurTeamData() });
+    this.setState({
+      team: getOurTeamData(),
+      listGroupCard: getListGroupData(),
+    });
   }
   componentWillUnmount() {
-    this.setState({team:[]})
+    console.log("will unmount");
+    this.setState({ team: [], listGroupCard: [] });
   }
 
- 
-
-
-
   render() {
-    // window.top=0;
+    const { listGroupCard,team } = this.state;
     return (
       <React.Fragment>
-        
-        <section>
+        <section >
           <ScrollAnimation
             animateIn="animate__animated animate__fadeIn"
             delay={200}
           >
             <hr className="w-75" />
-            <div className="text-center p-4">
+            <div className="text-center p-4" >
               <h2>...ما را بیشتر بشناسید</h2>
               <h6 className="text-center">Get to know us better...</h6>
 
@@ -60,6 +64,7 @@ class About extends Component {
             </div>
           </ScrollAnimation>
 
+          <hr className="w-75" />
           <Row className="p-4 flex-md-row-reverse">
             <Col lg="6">
               <ScrollAnimation
@@ -67,7 +72,7 @@ class About extends Component {
                 delay={200}
               >
                 <h3 className="text-right p-4">ارزش ها</h3>
-                <ICTListGroup />
+                <ICTListGroup data={listGroupCard} />
               </ScrollAnimation>
             </Col>
             <Col lg="6">
@@ -77,35 +82,7 @@ class About extends Component {
           <hr className="w-75" />
           <h2 className="text-center">تیم ما</h2>
           <h6 className="text-center">Our Team</h6>
-          <Row className="justify-content-center">
-            {this.state.team.map((item) => (
-              <Col
-                lg="3"
-                md="4"
-                sm="6"
-                xs="12"
-                className="text-center "
-                key={item.id}
-              >
-                <ScrollAnimation
-                  animateIn="animate__animated animate__slideInRight"
-                  delay={item.delay}
-                >
-                  <div className="team-img">
-                    <img
-                      src={item.image.src}
-                      width="150px"
-                      height="150px"
-                      className="rounded rounded-circle m-4 shadow-lg "
-                      alt=""
-                    />
-                    <h4>{item.caption.title}</h4>
-                    <h6>{item.caption.description}</h6>
-                  </div>
-                </ScrollAnimation>
-              </Col>
-            ))}
-          </Row>
+         <TitleIconDescription data={team}/>
         </section>
       </React.Fragment>
     );

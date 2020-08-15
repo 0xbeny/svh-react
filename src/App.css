@@ -265,7 +265,7 @@ p + .test {
   background-position: right;
   width: 100vw;
   height: auto;
-  padding: 5%;
+  padding: 5px;
 }
 
 .ict-web {
@@ -401,17 +401,17 @@ p + .test {
 }
 
 .team-img img {
-  -webkit-filter: drop-shadow(4px 4px 8px #5c5c5c);
-          filter: drop-shadow(4px 4px 8px #5c5c5c);
+  -webkit-filter: drop-shadow(4px 4px 8px #bdbdbd);
+          filter: drop-shadow(4px 4px 8px #bdbdbd);
 }
 
 .team-img h4 {
-  -webkit-filter: drop-shadow(4px 4px 8px #5c5c5c);
-          filter: drop-shadow(4px 4px 8px #5c5c5c);
+  -webkit-filter: drop-shadow(4px 4px 8px #bdbdbd);
+          filter: drop-shadow(4px 4px 8px #bdbdbd);
 }
 
 .team-img h6 {
-  -webkit-filter: drop-shadow(4px 4px 8px #5c5c5c);
-          filter: drop-shadow(4px 4px 8px #5c5c5c);
+  -webkit-filter: drop-shadow(4px 4px 8px #bdbdbd);
+          filter: drop-shadow(4px 4px 8px #bdbdbd);
 }
 /*# sourceMappingURL=App.css.map */

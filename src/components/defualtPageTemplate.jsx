@@ -10,26 +10,16 @@ class DefualtPageTemplate extends Component {
     const delay = 200;
     return (
       <Row className="m-2 align-items-center">
-        <Col lg="6" md="6">
-          <ScrollAnimation
-            animateIn="animate__animated animate__slideInLeft"
-            delay={delay}
-          >
-            <CarouselSlides data={carouselData} />
-          </ScrollAnimation>
+        <Col lg="6" md="6" className="svh-col-slide-to-right">
+          <CarouselSlides data={carouselData} />
         </Col>
-        <Col className="text-right" lg="6" md="6">
-          <ScrollAnimation
-            animateIn="animate__animated animate__slideInRight"
-            delay={delay}
-          >
-            <img width="150px" src={pageImage} alt="" />
-            <h1>{title}</h1>
-            <p dir="rtl" className="text-justify ">
-              {description}
-            </p>
-            <button className="test">Behnam</button>
-          </ScrollAnimation>
+        <Col className="text-right svh-col-slide-to-left" lg="6" md="6 ">
+          <img width="150px" src={pageImage} alt="" />
+          <h1>{title}</h1>
+          <p dir="rtl" className="text-justify ">
+            {description}
+          </p>
+          <button className="test">Behnam</button>
         </Col>
       </Row>
     );
